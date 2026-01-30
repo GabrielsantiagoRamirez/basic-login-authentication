@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    height: 100%;
+    background-color: rgba(138, 138, 138, 0.472);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login {
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+.login {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border {
+    0% {
+        border-radius: 0%;
+    }
+
+    100% {
+        border-top-left-radius: 20%;
+        border-bottom-left-radius: 20%;
+    }
+}
+
+.login .title {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    display: block;
+}
+
+.login h2 {
+    font-weight: unset;
+    display: block;
+}
+
+.login input {
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #6c63ff;
+    font-size: 16px;
+}
+
+.login button {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #6c63ff;
+    font-size: 16px;
+}
+
+.login button a {
+    text-decoration: none;
+    color: white;
+}
+
+.login .access:hover {
+    background-color: #5a52e0;
+    cursor: pointer;
+}
+
+.login a {
+    display: block;
+    margin: 10px;
+    margin-top: 10px;
+    color: darkgray;
+    text-decoration: none;
+}
+
+.login a:hover {
+    color: black;
+}
+
+.login-nt {
+    width: 50%;
+    height: auto;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    animation-name: border-nt;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border-nt {
+    0% {
+        border-radius: 0%;
+    }
+
+    100% {
+        border-top-right-radius: 20%;
+        border-bottom-right-radius: 20%;
+    }
+}
+
+.login-nt .title {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 15px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-nt button {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    position: relative;
+    border: 2px solid white;
+}
+
+.login-nt button i {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.login-nt .mail {
+    width: 100%;
+    background-color: #4285F4;
+    background: linear-gradient(89deg, rgba(66, 133, 244, 1) 0%, rgba(234, 67, 53, 1) 25%, rgba(251, 188, 4, 1) 50%, rgba(52, 168, 83, 1) 75%);
+}
+
+.login-nt .face {
+    width: 100%;
+    background-color: #1877f2;
+}
+
+.login-nt .x {
+    width: 100%;
+    background-color: #000000;
+}
+
+.login-nt .insta {
+    width: 100%;
+    background: #525DCF;
+    background: linear-gradient(89deg, rgba(82, 93, 207, 1) 0%, rgba(171, 52, 176, 1) 25%, rgba(222, 45, 116, 1) 50%, rgba(254, 205, 105, 1) 75%);
+}
+
+.login-nt .link {
+    width: 100%;
+    background-color: #007ebb;
+}
+
+.login-nt .git {
+    width: 100%;
+    background-color: #000000;
+}
+
+.login-nt button:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.login img,
+.login-nt img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.login-header {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 100px;
+}
+
+.login-nt button:not([data-provider="google"]) {
+    opacity: 0.6;
+}
+
+.login-nt button:not([data-provider="google"]):hover {
+    cursor: not-allowed;
+    background: #444;
+    color: #ccc;
+}
+
+.back-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+.back-icon svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-icon:hover svg {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

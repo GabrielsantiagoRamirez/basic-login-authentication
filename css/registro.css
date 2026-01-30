@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+body{
+    background-color: rgba(138, 138, 138, 0.472);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form{
+    width: 50%;
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes border{
+    0%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 20%;
+    }
+}
+
+.form h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form h2{
+    font-size: 20px;
+    font-weight: unset;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    color: white;
+    display: block;
+}
+
+.form a{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #6c63ff;
+}
+
+.form a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.form button{
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+}
+
+.form button:hover{
+    color: white;
+    background-color: #6c63ff;
+}
+

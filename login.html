@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="icon" href="./img/icons/login.png" />
+  </head>
+
+  <body>
+    <a href="./index.html" class="back-icon" title="Volver al inicio">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3 9.5L12 3l9 6.5" />
+        <path d="M5 10v10h14V10" />
+        <path d="M9 20v-6h6v6" />
+      </svg>
+    </a>
+    <div class="container">
+      <div class="container-login">
+        <div class="login">
+          <div class="login-header">
+            <img
+              src="./img/pictures/503182806_2235046120286196_854718863633637338_n(1).jpg"
+              alt=""
+            />
+          </div>
+          <h2 class="title">Ingresa tu usuario y contraseña</h2>
+          <form action="">
+            <h2>Ingresa tu usuario:</h2>
+            <input type="text" placeholder="Usuario" />
+
+            <h2>Ingresa tu contraseña:</h2>
+            <input type="password" placeholder="Contraseña" />
+
+            <button class="access" type="submit">Acceder</button>
+          </form>
+          <a href="./recuperar.html" class="forgot-password">
+            ¿Olvidaste tu contraseña?
+          </a>
+          <a href="./registro.html">Registrate</a>
+        </div>
+        <div class="login-nt">
+          <div class="login-header">
+            <img
+              src="./img/pictures/139587997_1138045823319570_454372781029241307_n.jpg"
+              alt=""
+            />
+          </div>
+          <h2 class="title">Inicia sesión con tus redes sociales</h2>
+          <div class="icons">
+            <button class="mail" type="button" data-provider="google">
+              <i class="fab fa-google"></i> Acceder con Google
+            </button>
+            <button class="face" type="button" data-provider="facebook">
+              <i class="fab fa-facebook"></i> Acceder con Facebook
+            </button>
+            <button class="x" type="button" data-provider="x">
+              <i class="fa-brands fa-x-twitter"></i> Acceder con X
+            </button>
+            <button class="insta" type="button" data-provider="instagram">
+              <i class="fab fa-instagram"></i> Acceder con Instagram
+            </button>
+            <button class="link" type="button" data-provider="linkedin">
+              <i class="fab fa-linkedin"></i> Acceder con LinkedIn
+            </button>
+            <button class="git" type="button" data-provider="github">
+              <i class="fab fa-github"></i> Acceder con GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="./js/pages/login.js"></script>
+</html>
