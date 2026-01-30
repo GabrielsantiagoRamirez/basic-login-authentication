@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperar contraseña</title>
 
-    <link rel="stylesheet" href="./css/recuperar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/icons/recuperar.webp">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/recuperar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/icons/recuperar.webp" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form
+        class="form"
+        action="https://formsubmit.co/gabrielsabtiago716@gmail.com"
+        method="POST"
+      >
+        <h1>Recuperar contraseña</h1>
+        <p class="description">
+          Ingresa tu correo electrónico y te enviaremos un enlace
+          para restablecer tu contraseña.
+        </p>
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="email" required>
+        <input type="hidden" name="_subject" value="Recuperación de contraseña">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://gabrielsantiagoramirez.github.io/basic-login-authentication/exitoso.html">
+        <button type="submit">Enviar enlace</button>
+        <a href="./login.html" class="back-link">← Volver al login</a>
+      </form>
+      </div>
+    </main>
 
-<main>
-    <div class="container">
-        <form class="form">
-            <h1>Recuperar contraseña</h1>
-
-            <p class="description">
-                Ingresa tu correo electrónico y te enviaremos un enlace
-                para restablecer tu contraseña.
-            </p>
-
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" placeholder="correo@ejemplo.com" required>
-
-            <button type="submit">Enviar enlace</button>
-
-            <div id="status" class="status hidden">
-                <p class="status-message"></p>
-            </div>
-
-            <a href="./login.html" class="back-link">← Volver al login</a>
-        </form>
-    </div>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-  (function () {
-    emailjs.init("F3AWArAOSX99Gs1Wm");
-  })();
-</script>
-
-<script src="./js/pages/recuperar.js"></script>
-
-
-</body>
+    <script src="./js/pages/recuperar.js"></script>
+  </body>
 </html>
