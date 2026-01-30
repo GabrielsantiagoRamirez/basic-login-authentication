@@ -18,25 +18,44 @@
     <main>
       <div class="container">
         <form
-        class="form"
-        action="https://formsubmit.co/gabrielsabtiago716@gmail.com"
-        method="POST"
-      >
-        <h1>Recuperar contraseña</h1>
-        <p class="description">
-          Ingresa tu correo electrónico y te enviaremos un enlace
-          para restablecer tu contraseña.
-        </p>
-        <label for="email">Correo electrónico</label>
-        <input type="email" name="email" id="email" required>
-        <input type="hidden" name="_subject" value="Recuperación de contraseña">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://gabrielsantiagoramirez.github.io/basic-login-authentication/exitoso.html">
-        <button type="submit">Enviar enlace</button>
-        <a href="./login.html" class="back-link">← Volver al login</a>
-      </form>
+          class="form"
+          action="https://formsubmit.co/gabrielsabtiago716@gmail.com"
+          method="POST"
+        >
+          <h1>Recuperar contraseña</h1>
+          <p class="description">
+            Ingresa tu correo electrónico y te enviaremos un enlace para
+            restablecer tu contraseña.
+          </p>
+          <label for="email">Correo electrónico</label>
+          <input type="email" name="email" id="email" required />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Recuperación de contraseña"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://gabrielsantiagoramirez.github.io/basic-login-authentication/exitoso.html"
+          />
+          <button type="submit">Enviar enlace</button>
+          <a href="./login.html" class="back-link">← Volver al login</a>
+        </form>
       </div>
     </main>
+    <div id="successModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="icon-success">✅</div>
+        <h2>Correo enviado</h2>
+        <p>
+          Si el correo existe en nuestro sistema, recibirás instrucciones para
+          restablecer tu contraseña.
+        </p>
+        <button id="goHome">Volver al inicio</button>
+      </div>
+    </div>
   </body>
 </html>
