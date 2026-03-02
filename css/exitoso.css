@@ -16,12 +16,27 @@ body {
   }
 .container {
     padding: 40px 60px;
+    margin: 0 16px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
+    box-sizing: border-box;
+    max-width: 90vw;
+}
 .container h1 {
     font-size: 28px;
     color: #2e7d32;
-  }
+}
+
+/* ========== RESPONSIVE EXITOSO ========== */
+@media (max-width: 500px) {
+    .container {
+        padding: 24px 20px;
+        margin: 0 12px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+}

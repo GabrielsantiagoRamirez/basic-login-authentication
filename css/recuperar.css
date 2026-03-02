@@ -18,7 +18,9 @@ body {
     border-radius: 16px;
     width: 100%;
     max-width: 400px;
+    margin: 0 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .form h1 {
@@ -161,5 +163,26 @@ button:hover {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* ========== RESPONSIVE RECUPERAR ========== */
+@media (max-width: 450px) {
+    body {
+        padding: 16px 0;
+    }
+
+    .container {
+        padding: 24px 20px;
+        margin: 0 12px;
+    }
+
+    .form h1 {
+        font-size: 1.4rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 24px 20px;
     }
 }
