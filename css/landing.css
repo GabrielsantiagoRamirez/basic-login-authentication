@@ -1,46 +1,56 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
 }
 
 body{
+    min-height: 100vh;
     background-image: url(../img/index/image.png);
     background-size: cover;
     background-color: #6c63ff;
-    background-position: right top;
-    position: absolute;
+    background-position: center top;
 }
 
 .container{
     position: relative;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .texts{
     margin-left: 40px;
     z-index: 1;
     color: white;
+    max-width: 100%;
 }
 
 .tittle{
-    font-size: 100px;
+    font-size: clamp(1.75rem, 5vw + 1rem, 100px);
     font-weight: bold;
     font-family: "Raleway", sans-serif;
     -webkit-text-stroke: 2px black;
     padding-bottom: 20px;
     padding-top: 100px;
+    line-height: 1.1;
+    word-wrap: break-word;
 }
 
 .subtitle{
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw + 0.5rem, 22px);
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 .btn {
@@ -71,6 +81,11 @@ body{
     position: relative;
     top: 150px;
     right: 50px;
+}
+
+.img img{
+    max-width: 100%;
+    height: auto;
 }
 
 .about-project {
@@ -169,4 +184,74 @@ body{
     margin-top: 50px;
     font-size: 13px;
     opacity: 0.6;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .texts {
+        margin-left: 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .tittle {
+        padding-top: 40px;
+    }
+
+    .img {
+        top: 40px;
+        right: 0;
+        order: 2;
+        padding-bottom: 40px;
+    }
+
+    .about-project {
+        margin-top: 80px;
+        padding: 40px 5%;
+    }
+
+    .about-container h2 {
+        font-size: 26px;
+    }
+
+    .about-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tittle {
+        padding-top: 20px;
+        -webkit-text-stroke: 1px black;
+    }
+
+    .subtitle {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .about-project {
+        margin-top: 60px;
+        padding: 30px 4%;
+    }
+
+    .about-container h2 {
+        font-size: 22px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }

@@ -11,20 +11,25 @@ body {
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 60px 16px 40px;
+    box-sizing: border-box;
 }
 
 .container-login {
     display: flex;
-    width: 50%;
+    width: 100%;
+    max-width: 900px;
     height: auto;
+    flex-wrap: wrap;
 }
 
 .login {
     width: 50%;
+    min-width: 280px;
     height: auto;
     background-color: white;
     color: black;
@@ -53,6 +58,9 @@ body {
     padding-bottom: 20px;
     margin-top: 15px;
     display: block;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .login h2 {
@@ -106,6 +114,7 @@ body {
 
 .login-nt {
     width: 50%;
+    min-width: 280px;
     height: auto;
     color: white;
     background-color: black;
@@ -135,7 +144,9 @@ body {
     margin-top: 15px;
     display: block;
     font-weight: bold;
-    text-align: center;
+    font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .login-nt button {
@@ -229,6 +240,76 @@ body {
     cursor: not-allowed;
     background: #444;
     color: #ccc;
+}
+
+/* ========== RESPONSIVE LOGIN ========== */
+@media (max-width: 700px) {
+    .container {
+        padding: 56px 12px 24px;
+        align-items: flex-start;
+    }
+
+    .container-login {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .login,
+    .login-nt {
+        width: 100%;
+        min-width: unset;
+        border-radius: 10px;
+    }
+
+    .login {
+        animation: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .login-nt {
+        animation: none;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .login .title,
+    .login-nt .title {
+        font-size: 1.1rem;
+    }
+
+    .login-header {
+        height: 100px;
+    }
+
+    .login-header img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .login input {
+        margin: 10px 0;
+    }
+
+    .login-nt button {
+        font-size: 14px;
+        padding-left: 44px;
+    }
+
+    .login-nt button i {
+        left: 14px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-nt button {
+        font-size: 13px;
+    }
+
+    .login-nt button i {
+        font-size: 16px;
+    }
 }
 
 .back-icon {
